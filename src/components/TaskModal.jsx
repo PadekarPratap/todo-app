@@ -16,7 +16,7 @@ const validationSchema = Yup.object().shape({
 const TaskModal = () => {
 
   const todo = useSelector((store) => store.todo.todoList);
-  const { isOpen, setIsOpen } = useContext(AppContext);
+  const { isOpen, setIsOpen, taskId } = useContext(AppContext);
   const dispatch = useDispatch();
 
   const initialValues = {

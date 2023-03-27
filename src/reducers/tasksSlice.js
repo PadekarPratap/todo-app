@@ -49,17 +49,24 @@ const tasksSlice = createSlice({
     }
     return state
    },
+   updateTask(state, action){
+    let ind = state.todoList.findIndex((task) => task.id === action.payload.id)
+    state.todoList[ind] = action.payload 
+    let localTodo = JSON.parse(localStorage.getItem('todoList'))
+    if(localTodo){
+      localTodo[ind] = action.payload
+      localStorage.setItem('todoList', JSON.stringify(localTodo))
+    }
+   },
    updateFilterByStatus(state, action){
       state.filterByStatus = action.payload
    },
    updateFilterByTag(state, action){
-    state.filterByTag = action.payload
+     state.filterByTag = action.payload
    }
-
-
   },
 });
 
 
-export const {addTask, deleteTask, completeTask, updateFilterByStatus,updateFilterByTag} = tasksSlice.actions
+export const {addTask, deleteTask, completeTask, updateFilterByStatus,updateFilterByTag, updateTask} = tasksSlice.actions
 export default tasksSlice.reducer
