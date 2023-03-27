@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useContext } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AppContext } from "../App";
 import { addTask } from "../reducers/tasksSlice";
 import { toast } from "react-hot-toast";
 
 const TodoInputTask = () => {
   const [task, setTask] = useState('')
-  const {setIsOpen, setType} = useContext(AppContext)
+  const {setIsOpen} = useContext(AppContext)
+  const todo = useSelector((store) => store.todo.todoList)
 
   const dispatch = useDispatch()
 
@@ -20,7 +21,7 @@ const TodoInputTask = () => {
           tags: [],
           isCompleted: false,
           time: new Date().toLocaleString(),
-          id: crypto.randomUUID()
+          id: todo.length === 0 ? 1 : todo.length + 1
         }))
         toast.success("Task has been added successfully!")
         setTask("")

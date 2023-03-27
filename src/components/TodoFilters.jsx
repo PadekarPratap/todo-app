@@ -12,7 +12,7 @@ const TodoFilters = () => {
     const updateStatus = (e) =>{
         dispatch(updateFilterByStatus(e.target.value))
     }
-    console.log(filterTag)
+    // console.log(filterTag)
     const updateTag = (e) =>{
         dispatch(updateFilterByTag(e.target.value))
     }
