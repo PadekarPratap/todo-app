@@ -38,8 +38,8 @@ const TodoItem = ({ task }) => {
         <CheckBtn complete={task.isCompleted} />
       </div>
       <div className="flex-grow">
-        <p className="text-2xl font-bold font-mono">{task.taskName}</p>
-        <p className="text-md text-gray-600 font-semibold">
+        <p className="text-2xl font-bold font-mono break-all">{task.taskName}</p>
+        <p className="text-md text-gray-600 font-semibold break-all">
           {task.description}
         </p>
         <p className="text-sm text-gray-500 leading-none">
