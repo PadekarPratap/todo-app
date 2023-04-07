@@ -44,9 +44,9 @@ const TodoInputTask = () => {
           value={task}
           onChange={(e) => setTask(e.target.value)}
         />
-        <div className="self-center space-x-4">
-          <button onClick={createTask}>Create Task</button>
-          <button onClick={createDetailedTask} className="sm:hidden">Create Detailed Task</button>
+        <div className="self-stretch sm:self-center sm:space-x-4 space-y-3">
+          <button onClick={createTask} className="w-full">Create Task</button>
+          <button onClick={createDetailedTask} className="sm:hidden w-full">Create Detailed Task</button>
         </div>
       </div>
       <div className="text-center mt-8 hidden sm:block">
