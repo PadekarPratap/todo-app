@@ -51,7 +51,7 @@ const EditModal = () => {
   return (
     <>
       <div className="fixed bg-black/40 inset-0"></div>
-      <div className=" bg-white fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-5">
+      <div className=" bg-white fixed top-4 left-4 right-4 bottom-4 lg:right-auto lg:bottom-auto lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%] p-5">
         <div className="flex items-center justify-between">
           <h2 className="text-3xl font-bold mr-12 text-teal-700">Edit Task</h2>
           <button

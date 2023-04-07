@@ -58,7 +58,7 @@ const TodoItem = ({ task }) => {
           })}
         </div>
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center gap-4 sm:gap-2">
         <abbr title="Priority Task">
           {task.isPriority && (
             <BsFillExclamationDiamondFill
@@ -72,7 +72,7 @@ const TodoItem = ({ task }) => {
           className="sm:bg-white bg-gray-200 hover:bg-white"
         >
           <BsTrashFill
-            className="text-red-600 hover:scale-105 sm:ml-5"
+            className="text-red-600 hover:scale-105 "
             size={25}
           />
         </button>
