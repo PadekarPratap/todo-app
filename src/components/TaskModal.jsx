@@ -56,7 +56,7 @@ const TaskModal = () => {
   return (
     <>
       <div className="fixed bg-black/40 inset-0"></div>
-      <div className=" bg-white fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-5">
+      <div className=" bg-white fixed top-[1rem] left-[1rem] right-[1rem] bottom-[1rem] lg:bottom-auto lg:right-auto lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%] p-5">
         <div className="flex items-center justify-between">
           <h2 className="text-3xl font-bold mr-12 text-teal-700">
             Create Task
